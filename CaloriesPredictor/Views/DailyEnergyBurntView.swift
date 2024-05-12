@@ -36,11 +36,9 @@ struct DailyEnergyBurntView: View {
             }
             Spacer()
             Button(action:  {
-                Task {
-                   await energyBurntManager.updateData()
-                }
+                energyBurntManager.updateData()
             }) {
-                Text("Update")
+                Text("Refresh")
             }
             .buttonStyle(.borderedProminent)
         }
