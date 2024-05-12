@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct CaloriesPredictorApp: App {
+    @StateObject private var energyBurntManager = EnergyBurntManager()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            DailyEnergyBurntView(energyBurntManager: energyBurntManager)
         }
     }
 }

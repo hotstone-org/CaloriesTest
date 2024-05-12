@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		C971C2002BEC5A760027643E /* CaloriesPredictorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C971C1FF2BEC5A760027643E /* CaloriesPredictorApp.swift */; };
-		C971C2022BEC5A760027643E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C971C2012BEC5A760027643E /* ContentView.swift */; };
 		C971C2042BEC5A770027643E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C971C2032BEC5A770027643E /* Assets.xcassets */; };
 		C971C2072BEC5A770027643E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C971C2062BEC5A770027643E /* Preview Assets.xcassets */; };
 		C971C2112BEC5A770027643E /* CaloriesPredictorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C971C2102BEC5A770027643E /* CaloriesPredictorTests.swift */; };
 		C971C21B2BEC5A770027643E /* CaloriesPredictorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C971C21A2BEC5A770027643E /* CaloriesPredictorUITests.swift */; };
 		C971C21D2BEC5A770027643E /* CaloriesPredictorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C971C21C2BEC5A770027643E /* CaloriesPredictorUITestsLaunchTests.swift */; };
+		C971C22C2BEC5BB90027643E /* DailyEnergyBurntView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C971C22B2BEC5BB90027643E /* DailyEnergyBurntView.swift */; };
+		C971C2302BEF0C1E0027643E /* EnergyBurntManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C971C22F2BEF0C1E0027643E /* EnergyBurntManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,6 @@
 /* Begin PBXFileReference section */
 		C971C1FC2BEC5A760027643E /* CaloriesPredictor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaloriesPredictor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C971C1FF2BEC5A760027643E /* CaloriesPredictorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaloriesPredictorApp.swift; sourceTree = "<group>"; };
-		C971C2012BEC5A760027643E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C971C2032BEC5A770027643E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C971C2062BEC5A770027643E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C971C20C2BEC5A770027643E /* CaloriesPredictorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CaloriesPredictorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +44,9 @@
 		C971C2162BEC5A770027643E /* CaloriesPredictorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CaloriesPredictorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C971C21A2BEC5A770027643E /* CaloriesPredictorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaloriesPredictorUITests.swift; sourceTree = "<group>"; };
 		C971C21C2BEC5A770027643E /* CaloriesPredictorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaloriesPredictorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C971C22B2BEC5BB90027643E /* DailyEnergyBurntView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyEnergyBurntView.swift; sourceTree = "<group>"; };
+		C971C22F2BEF0C1E0027643E /* EnergyBurntManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyBurntManager.swift; sourceTree = "<group>"; };
+		C971C2312BEF33BF0027643E /* CaloriesPredictor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CaloriesPredictor.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +97,10 @@
 		C971C1FE2BEC5A760027643E /* CaloriesPredictor */ = {
 			isa = PBXGroup;
 			children = (
+				C971C2312BEF33BF0027643E /* CaloriesPredictor.entitlements */,
+				C971C2292BEC5B8C0027643E /* Views */,
 				C971C1FF2BEC5A760027643E /* CaloriesPredictorApp.swift */,
-				C971C2012BEC5A760027643E /* ContentView.swift */,
+				C971C22F2BEF0C1E0027643E /* EnergyBurntManager.swift */,
 				C971C2032BEC5A770027643E /* Assets.xcassets */,
 				C971C2052BEC5A770027643E /* Preview Content */,
 			);
@@ -125,6 +130,14 @@
 				C971C21C2BEC5A770027643E /* CaloriesPredictorUITestsLaunchTests.swift */,
 			);
 			path = CaloriesPredictorUITests;
+			sourceTree = "<group>";
+		};
+		C971C2292BEC5B8C0027643E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C971C22B2BEC5BB90027643E /* DailyEnergyBurntView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +270,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C971C2022BEC5A760027643E /* ContentView.swift in Sources */,
 				C971C2002BEC5A760027643E /* CaloriesPredictorApp.swift in Sources */,
+				C971C22C2BEC5BB90027643E /* DailyEnergyBurntView.swift in Sources */,
+				C971C2302BEF0C1E0027643E /* EnergyBurntManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,12 +433,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CaloriesPredictor/CaloriesPredictor.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CaloriesPredictor/Preview Content\"";
 				DEVELOPMENT_TEAM = DTMLYAHFX9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "To read the health data and show it in the app";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -448,12 +464,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CaloriesPredictor/CaloriesPredictor.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CaloriesPredictor/Preview Content\"";
 				DEVELOPMENT_TEAM = DTMLYAHFX9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "To read the health data and show it in the app";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
